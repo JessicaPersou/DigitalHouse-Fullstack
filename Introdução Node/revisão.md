@@ -1,4 +1,4 @@
-## Aprendizado do dia
+## Aprendizado do dia 19/07/2022
 
 ### Variaveis e Constantes
 
