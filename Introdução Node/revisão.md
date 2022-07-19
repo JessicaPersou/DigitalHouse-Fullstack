@@ -6,3 +6,7 @@
 - Let e Const têm escopo de bloco.
 - Arrays constantes podem ter seu conteúdo modificado.
 - Tudo que não for variável deve ser declarado como const.
+
+### Condicionais
+- É melhor usar apenas uma operação lógica do que duas ao mesmo tempo.
+- Operador ternário (? :) é uma boa solução para estruturas condicionais simples.
