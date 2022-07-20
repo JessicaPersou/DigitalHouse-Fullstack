@@ -10,3 +10,12 @@
 ### Condicionais
 - É melhor usar apenas uma operação lógica do que duas ao mesmo tempo.
 - Operador ternário (? :) é uma boa solução para estruturas condicionais simples.
+
+### Arrays
+- ForEach nós permite caminhar por arrays de forma facilitada.
+- ForEach é uma função assíncrono, portanto dever ser utilizado para tarefa que não requeream sincronismo na leitura/processamento de dados.
+
+### Exercícios
+
+## Ex-1
+
