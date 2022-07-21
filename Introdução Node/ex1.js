@@ -6,4 +6,3 @@ for(let i = 0; i < filmes.length || i < notas.length; i++ ){
     console.log("O filme : " + filmes[i] + ", tem a nota : " + notas[i])   
 
 }
-
