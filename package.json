@@ -1,0 +1,19 @@
+{
+  "name": "digitalhouse",
+  "version": "1.0.0",
+  "description": "- Módulo 1 - Algaritmos e Lógica - Módulo 2 - Introdução a Node e Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaPersou/DigitalHouse-Fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessicaPersou/DigitalHouse-Fullstack/issues"
+  },
+  "homepage": "https://github.com/JessicaPersou/DigitalHouse-Fullstack#readme"
+}
