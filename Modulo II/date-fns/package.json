@@ -1,0 +1,14 @@
+{
+  "name": "aulanode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "datas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jessica",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.29.1"
+  }
+}
