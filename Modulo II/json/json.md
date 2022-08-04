@@ -1,4 +1,4 @@
-# Json
+># Json
 
 - Acrônimo para Javascript Object Notation.
 - É um formato de Texto do Javascript.
@@ -7,7 +7,7 @@
 - É muito parecido com o objeto literal.
 
 
-## Json x Objeto Literal
+># Json x Objeto Literal
 
 - Json só admite aspas duplas e O.L. duplas ou simples.
 - Json passa as chaves entre aspas.
@@ -15,14 +15,14 @@
 - Json não aceita vírgula no último elemento e O.L. recomenda o uso de vírgula no último elemento.
 
 
-## Json (Formato)
+># Json (Formato)
 
     {
      "propriedade1" : "valor",
      "propriedade2" : "valor"
     }
 
- ## Objeto Literal (Formaro)
+># Objeto Literal (Formaro)
 
       let pessoa = {
             nome: "Jessica PerSou",
@@ -30,3 +30,8 @@
             profissão: "Programador de Sistemas",
             cargo: "Desenvolvedor Trainee"
             }
+
+># Métodos Json
+
+- JSON.stringify : Para transformar um objeto em uma string.
+- JSON.parse : Para transformar uma string em um objeto.
