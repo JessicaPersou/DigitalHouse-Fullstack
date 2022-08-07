@@ -15,7 +15,41 @@ triplo(n);
 // console.log(calcularValorDevido(5))
 
 // //
-function calcularValorDevido(pesoDeRoupaSuja){
-    return (pesoDeRoupaSuja * 3.00) + 10.0  
+// function calcularValorDevido(pesoDeRoupaSuja){
+//     return (pesoDeRoupaSuja * 3.00) + 10.0  
+// }
+// console.log(calcularValorDevido(3))
+
+//
+// function passoAPasso(){
+//     for(let i = 0; i < 5; i++){
+//         console.log(i)
+//     }
+// }
+// passoAPasso()
+
+// function osPares(){
+//   for( let i = 1 ; i <= 6 ; i++){
+//     let x = i
+//         if(x % 2 == 0){ 
+//             console.log("O numero " + i + " é par")
+//         }
+//     }
+// }
+
+// osPares()
+
+
+
+let cont =0
+function somaDosPares(numero){
+    for(let i = 0; i <= numero ; i++){
+        if( numero % 2 == 1){
+            cont += numero 
+            
+        }
+    }
+    return console.log(cont) 
 }
-console.log(calcularValorDevido(3))
+
+somaDosPares(12)
