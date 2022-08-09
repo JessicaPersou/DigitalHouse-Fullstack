@@ -39,17 +39,16 @@ triplo(n);
 
 // osPares()
 
-
-
-let cont =0
+let cont = 0
 function somaDosPares(numero){
-    for(let i = 0; i <= numero ; i++){
-        if( numero % 2 == 1){
-            cont += numero 
-            
+    for(let i = 0; i <= numero; i++){
+        if(i % 2 == 0){
+             return cont +=i
+             // console.log(cont)
         }
+        
     }
-    return console.log(cont) 
 }
 
-somaDosPares(12)
+
+console.log(somaDosPares(6))
