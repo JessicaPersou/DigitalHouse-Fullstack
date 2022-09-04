@@ -9,3 +9,4 @@ notas.forEach(notas /*elemento*/  =>{
         console.log(notas/*elemento*/ )
     }
 })
+
