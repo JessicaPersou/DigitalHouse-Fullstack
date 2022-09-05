@@ -1,0 +1,1476 @@
+<h2>Request Body </h2>
+<div class="koin-tb-table">
+  <div class="koin-tb-inner">
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Required</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FraudId</td>
+          <td>String (32)</td>
+          <td>Code used in the risk analysis process.</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Reference</td>
+          <td>String (300)</td>
+          <td>Order number sent by the store (We recommend using only numbers)</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Currency</td>
+          <td>String (3)</td>
+          <td>Type of currency used</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>Decimal (2.2)</td>
+          <td>Type of currency used</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>DiscountValue</td>
+          <td>Decimal (9.2)</td>
+          <td>Fixed discount on the total order value.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>IncreasePercent</td>
+          <td>Decimal (2.2)</td>
+          <td>Percentage addition to the total order value.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>DiscountPercent</td>
+          <td>Decimal (2.2)</td>
+          <td>Discount percentage on total order value</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>IncreaseValue</td>
+          <td>Decimal (9.2)</td>
+          <td>Fixed addition to the total order amount.</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>PaymentType</td>
+          <td>Integer (3)</td>
+          <td>Code that will inform the installment option selected by the customer when finalizing an order. Each
+            parcel will have a different code that must be captured through the Authorization service.</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ProductType</td>
+          <td> Array[String]</td>
+          <td>Type of product being sold (ex: ProductType:["Airline", "Lodging","CarRentClass"])</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Name</td>
+          <td>String (100)</td>
+          <td>Payer Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Email</td>
+          <td>String (300)</td>
+          <td>Payer's Email</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Documents.Key</td>
+          <td>String (14)</td>
+          <td>Buyer Document Type</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Documents.Value</td>
+          <td>String (14)</td>
+          <td>Buyer Document Number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Phones.AreaCode</td>
+          <td>Integer (2)</td>
+          <td>Payer contact phone area code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Phones.Number</td>
+          <td>String (10)</td>
+          <td>Payer contact phone number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Phones.PhoneType</td>
+          <td>Integer (1)</td>
+          <td>Payer's phone type: 2 = Residential / 3= Business / 4= Mobile</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.ZipCode</td>
+          <td>String (10)</td>
+          <td>payer address zip code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.Street</td>
+          <td>String (100)</td>
+          <td>Payer's address street</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.Number</td>
+          <td>String (10)</td>
+          <td>Payer address number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.Complement</td>
+          <td>String (300)</td>
+          <td>Payer address supplement</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.District</td>
+          <td>String (100)</td>
+          <td>Payer's address district</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.City</td>
+          <td>String (100)</td>
+          <td>City of payer's address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.State</td>
+          <td>String (2)</td>
+          <td>Payer address status</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.Country</td>
+          <td>String (100)</td>
+          <td>Country of payer's address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.Address.AddressType</td>
+          <td>Integer (1)</td>
+          <td>Payer address type: 1 = Residential / 2 = Commercial</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Buyer.additionalInfo</td>
+          <td>Node(key, value)</td>
+          <td>Birthday(date) is required </td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.DeliveryDate</td>
+          <td>String (10)</td>
+          <td>Date of use of the service</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Price</td>
+          <td>Decimal (9.2)</td>
+          <td>Shipping Value</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.ZipCode</td>
+          <td>String (9)</td>
+          <td>Zip of delivery address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.Street</td>
+          <td>String (100)</td>
+          <td>Delivery Address Street</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.Number</td>
+          <td>String (10)</td>
+          <td>Delivery address number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.Complement</td>
+          <td>String (300)</td>
+          <td>Delivery address supplement</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.District</td>
+          <td>String (100)</td>
+          <td>Delivery Address Neighborhood</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.City</td>
+          <td>String (100)</td>
+          <td>Delivery Address City</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.State</td>
+          <td>String(2)</td>
+          <td>Status of delivery address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.Country</td>
+          <td>String(100)</td>
+          <td>Country of delivery address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Shipping.Address.AddressType</td>
+          <td>Integer (1)</td>
+          <td>Type of delivery address: 1 = Residential / 2 = Commercial</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Reference</td>
+          <td>String (500)</td>
+          <td>Item SKU</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Description</td>
+          <td>String (500)</td>
+          <td>Item Description</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Category</td>
+          <td>String (500)</td>
+          <td>Item Category</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Quantity</td>
+          <td>Integer (3)</td>
+          <td>Amount of this item purchased</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Price</td>
+          <td>Decimal (9.2)</td>
+          <td>Item Unit Value</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Items.Attributes.Key</td>
+          <td>Integer (10)</td>
+          <td>Quantity of Items</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>OrderOriginData.OrderOriginDocuments.Type</td>
+          <td>String(50)</td>
+          <td>Type of document</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>OrderOriginData.OrderOriginDocuments.Number</td>
+          <td>String(50)</td>
+          <td>Document number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>OrderOriginData.OrderOriginName</td>
+          <td>String (300)</td>
+          <td>Name of person of origin</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>OrderOriginCompanyName</td>
+          <td>String (300)</td>
+          <td>Company Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>OrderOriginData.OrderOriginEmail</td>
+          <td>String (300)</td>
+          <td>Email of origin person</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>OrderOriginData.OrderOriginPhone</td>
+          <td>String (15)</td>
+          <td>Phone of origin person</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalParameters.ExpirationDate</td>
+          <td>Datetime (19)</td>
+          <td>Date and time of offer expiration for KOIN. yyyy-MM-dd HH:mm:ss</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalParameters.IntermediateId</td>
+          <td>String(50)</td>
+          <td>Intermediary code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalParameters.SalesChannelId</td>
+          <td>Integer (2)</td>
+          <td>Sales Channel Code: 1 = Physical Store / 2 = Telesales / 3 = Checkout</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalParameters.IsTermsAccepted</td>
+          <td>Boolean</td>
+          <td>Accepted:  true</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalParameters.IsPoliticsAccepted</td>
+          <td>Boolean</td>
+          <td>Accepted:  true</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>OrderOriginDocuments.Key</td>
+          <td>String (20)</td>
+          <td>Store CNPJ</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>OrderOriginDocuments.Value</td>
+          <td>String (20)</td>
+          <td>CNPJ number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>RequestDate</td>
+          <td>Datetime</td>
+          <td>Date the order was generated</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalInfo.key</td>
+          <td>String (10)</td>
+          <td>Enter "BirthDay" key</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalInfo.Value</td>
+          <td>Date (10)</td>
+          <td>Payer's date of birth</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>IsFirstPurchase</td>
+          <td>Boolean</td>
+          <td>First Purchase Parameter</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>IsReliable</td>
+          <td>Boolean</td>
+          <td>Customer Whitelist?</td>
+          <td>No</td>
+        </tr>
+        <tr>
+
+        <tr>
+          <th colspan="4">AdditionalData</th>
+        </tr>
+
+        <!-- Education -->
+        <tr>
+          <th colspan="4">ClassData</th>
+        </tr>
+        <td>AdditionalData.ClassData.ClassDetails.ClassName</td>
+        <td>String (100)</td>
+        <td>Course Name</td>
+        <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassFinanceType</td>
+          <td>Integer (1)</td>
+          <td>AdditionalData.ClassData.ClassDetails.ClassFinanceType</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassSchoolName</td>
+          <td>String (100)</td>
+          <td>Education Institution</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassCourseLoad</td>
+          <td>Integer (20)</td>
+          <td>Course Credit Hours (in hours)</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassSchoolCampus</td>
+          <td>String (100)</td>
+          <td>Campus Name/Course Location</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassSchoolCampusCity</td>
+          <td>String (100)</td>
+          <td>Campus City/Course Location</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassStartDate</td>
+          <td>Date yyyy-MM-dd</td>
+          <td>Course Start Date</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassEndDate</td>
+          <td>Date yyyy-MM-dd</td>
+          <td>Expected Date for Course Completion</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassIsPresential</td>
+          <td>String (Y)</td>
+          <td>Classes are in person</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassPeriod</td>
+          <td>Integer (1)</td>
+          <td>Course Period</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassType.Category</td>
+          <td>Integer (10)</td>
+          <td>Course Category</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassType.SubCategory</td>
+          <td>Integer (10)</td>
+          <td>Course Sub Category</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassType.Segment</td>
+          <td>Integer (100)</td>
+          <td>Course Segment</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassMonthlyFee</td>
+          <td>Decimal (0000.00)</td>
+          <td>Course Fee</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.ClassDetails.ClassScholarship</td>
+          <td>Integer (10)</td>
+          <td>Scholarship Percentage</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentName</td>
+          <td>String (100)</td>
+          <td>Student Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentId</td>
+          <td>String(50)</td>
+          <td>MEC Student ID</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentRegistration</td>
+          <td>String (100)</td>
+          <td>Student RA (registration at the institution)</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentBondPayer</td>
+          <td>Integer (1)</td>
+          <td>Student Link with Payer</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentEmail</td>
+          <td>String (255)</td>
+          <td>Student Email</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentPhone</td>
+          <td>String (15)</td>
+          <td>Student Phone</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentBirthDate</td>
+          <td>Date yyyy-MM-dd</td>
+          <td>Student's Date of Birth</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentDocuments.Type</td>
+          <td>String (14)</td>
+          <td>Student Document Type</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentDocuments.Number</td>
+          <td>String (14)</td>
+          <td>Student document number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.StudentRegisterDate</td>
+          <td>Date yyyy-MM-dd</td>
+          <td>Student Enrollment Date</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.ZipCode</td>
+          <td>String (20)</td>
+          <td>student address zip code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.Country</td>
+          <td>String (20)</td>
+          <td>Country of Student Address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.State</td>
+          <td>String (2)</td>
+          <td>Student address status</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.City</td>
+          <td>String (20)</td>
+          <td>Student address city</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.District</td>
+          <td>String (20)</td>
+          <td>Student address district</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.Street</td>
+          <td>String (20)</td>
+          <td>Student address street</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.Number</td>
+          <td>String (10)</td>
+          <td>Student House Number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.ClassData.Students.Complement</td>
+          <td>String(200)</td>
+          <td>Student Address Supplement</td>
+          <td>No</td>
+        </tr>
+
+        <!-- CarRentalData -->
+        <tr>
+          <th colspan="4">CarRentalData</th>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.CarRentalCompany</td>
+          <td>String (300)</td>
+          <td>Lessor Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.CarDescription</td>
+          <td>String (300)</td>
+          <td>Vehicle Description</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.CarCategory</td>
+          <td>String(50)</td>
+          <td>Vehicle category</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpDateTime</td>
+          <td>DateTime (yyyy-MM-dd HH:mm:ss)</td>
+          <td>Date and time of vehicle pickup</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnDateTime</td>
+          <td>DateTime (yyyy-MM-dd HH:mm:ss)</td>
+          <td>Date and time of vehicle return</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.ZipCode</td>
+          <td>String (10)</td>
+          <td>Pickup address zip code</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.Street</td>
+          <td>String (100)</td>
+          <td>Retreat address street</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.Number</td>
+          <td>String (10)</td>
+          <td>Pickup address number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.Complement</td>
+          <td>String (300)</td>
+          <td>Pickup address supplement</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.District</td>
+          <td>String (100)</td>
+          <td>Pickup Address Neighborhood</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.City</td>
+          <td>String (100)</td>
+          <td>City of pickup address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.State</td>
+          <td>String (2)</td>
+          <td>Status of pickup address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.PickUpLocation.Country</td>
+          <td>String (100)</td>
+          <td>Country of pickup address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.ZipCode</td>
+          <td>String (10)</td>
+          <td>Return address zip code</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.Street</td>
+          <td>String (100)</td>
+          <td>Return Address Street</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.Number</td>
+          <td>String (10)</td>
+          <td>Return Address Number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.Complement</td>
+          <td>String (300)</td>
+          <td>Return Address Supplement</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.District</td>
+          <td>String (100)</td>
+          <td>Return Address Neighborhood</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.City</td>
+          <td>String (100)</td>
+          <td>City of return address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.State</td>
+          <td>String (2)</td>
+          <td>Return Address Status</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.ReturnLocation.Country</td>
+          <td>String (100)</td>
+          <td>Country of return address</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverName</td>
+          <td>String (100)</td>
+          <td>Driver's Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverEmail</td>
+          <td>String (300)</td>
+          <td>Driver's Email</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverBirthDate</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>Date of Birth of Driver</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverPhone</td>
+          <td>String (15)</td>
+          <td>Driver's Phone</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverGender</td>
+          <td>Integer (1)</td>
+          <td>Gender of Driver (1= Female / 2= Male)</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverDocuments.Type</td>
+          <td>String (14)</td>
+          <td>Driver's Document Type</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarRentalData.Drivers.DriverDocuments.Number</td>
+          <td>String (14)</td>
+          <td>Driver's Document Number</td>
+          <td>Yes</td>
+        </tr>
+
+        <!-- Car Penalty Fees -->
+        <tr>
+          <th colspan="4">Car Penalty Fee</th>
+        </tr>
+
+        <tr>
+          <td>AdditionalData.UserAccountData.Name</td>
+          <td>String (100)</td>
+          <td>Username Logged In to Store</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Email</td>
+          <td>String (300)</td>
+          <td>User's email logged in to the store</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Document.Key</td>
+          <td>String (14)</td>
+          <td>Login User Document</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Document.Value</td>
+          <td>String (14)</td>
+          <td>CPF number of the logged in user</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.AreaCode</td>
+          <td>Integer</td>
+          <td>Area code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.Number</td>
+          <td>String (10)</td>
+          <td>Phone number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.PhoneType</td>
+          <td>Integer</td>
+          <td>Payer's phone type: 2 = Residential / 3= Business / 4= Mobile</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.ZipCode</td>
+          <td>String (10)</td>
+          <td>Login user's zip code</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Street</td>
+          <td>String (100)</td>
+          <td>Address Street</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Number</td>
+          <td>String (10)</td>
+          <td>Address number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Complement</td>
+          <td>String (300)</td>
+          <td>Address Supplement</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.District</td>
+          <td>String(50)</td>
+          <td>Address Neighborhood</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.City</td>
+          <td>String(50)</td>
+          <td>Address City</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.State</td>
+          <td>String (2)</td>
+          <td>Address Status</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Country</td>
+          <td>String(50)</td>
+          <td>Country of address</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.AdressType</td>
+          <td>String (1)</td>
+          <td>Type of address: 1 = Residential / 2 = Commercial</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.LicensePlate</td>
+          <td>String(15)</td>
+          <td>Car license plate</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.Renavam</td>
+          <td>String (15)</td>
+          <td>RENAVAM number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarOwnerName</td>
+          <td>String (100)</td>
+          <td>Vehicle owner's name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarOwnerDocument.Key</td>
+          <td>String (14)</td>
+          <td>Vehicle Owner's Document</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarOwnerDocument.Value</td>
+          <td>String (14)</td>
+          <td>Vehicle Owner's Document Number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarMake</td>
+          <td>String(50)</td>
+          <td>Vehicle Brand</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarModel</td>
+          <td>String(50)</td>
+          <td>Vehicle Model</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarData.CarModelYear</td>
+          <td>Date (format: YYYY)</td>
+          <td>Vehicle model year</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarPendencies.PenaltyValue</td>
+          <td>Double (12)</td>
+          <td>Sum of the value of fines</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarPendencies.LicensingValue</td>
+          <td>Double (12)</td>
+          <td>Sum of Licensing Value</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarPendencies.IpvaValue</td>
+          <td>Double (12)</td>
+          <td>Sum of the value of the IPVA installments</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarPendencies.InsuranceValue</td>
+          <td>Double (12)</td>
+          <td>Sum of insurance amount</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CarPendencies.PendenciesReferenceYear</td>
+          <td>Date (format: YYYY)</td>
+          <td>Reference year of each pending issue</td>
+          <td>Yes</td>
+        </tr>
+
+
+        <!-- CellphoneInsuranceData -->
+        <tr>
+          <th colspan="4">CellphoneInsuranceData</th>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Name</td>
+          <td>String (100)</td>
+          <td>Username Logged In to Store</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Email</td>
+          <td>String (300)</td>
+          <td>User's email logged in to the store</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Document.Key</td>
+          <td>String (14)</td>
+          <td>Login User Document</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Document.Value</td>
+          <td>String (14)</td>
+          <td>CPF number of the logged in user</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.AreaCode</td>
+          <td>Integer</td>
+          <td>Area code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.Number</td>
+          <td>String (10)</td>
+          <td>Phone number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Phone.PhoneType</td>
+          <td>Integer</td>
+          <td>Payer's phone type: 2 = Residential / 3= Business / 4= Mobile</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.ZipCode</td>
+          <td>String (10)</td>
+          <td>Login user's zip code</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Street</td>
+          <td>String (100)</td>
+          <td>Address Street</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Number</td>
+          <td>String (10)</td>
+          <td>Address number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Complement</td>
+          <td>String (300)</td>
+          <td>Address Supplement</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.District</td>
+          <td>String(50)</td>
+          <td>Address Neighborhood</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.City</td>
+          <td>String(50)</td>
+          <td>Address City</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.State</td>
+          <td>String (2)</td>
+          <td>Address Status</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.Country</td>
+          <td>String(50)</td>
+          <td>Country of address</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.UserAccountData.Address.AdressType</td>
+          <td>String (1)</td>
+          <td>Type of address: 1 = Residential / 2 = Commercial</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.Imei</td>
+          <td>number(15)</td>
+          <td>Insured Mobile IMEI</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.DevideModel</td>
+          <td>String (80)</td>
+          <td>Phone model name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.DeviceCode</td>
+          <td>String(80)</td>
+          <td>Phone code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.SubscriptionDate</td>
+          <td>Date</td>
+          <td>Date of purchase of the insurance</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.InsuranceInstallment</td>
+          <td>Decimal (9.2)</td>
+          <td>value of insurance installment</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.ExpirationDate</td>
+          <td>Date</td>
+          <td>Insurance expiration date</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.CellphoneInsuranceData.Type</td>
+          <td>String (100)</td>
+          <td>Type of insurance (Ex.: Anti-theft insurance)</td>
+          <td>Yes</td>
+        </tr>
+
+        <!-- LodgingData -->
+        <tr>
+          <th colspan="4">LodgingData</th>
+        </tr>
+
+        <tr>
+          <td>AdditionalData.LodgingData.LodgingName</td>
+          <td>String (100)</td>
+          <td>Name of the Hotel/Inn</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.CheckInDate</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>Data CheckIn</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.CheckOutDate</td>
+          <td>Date(yyyy-MM-dd)</td>
+          <td>Date CheckOut</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Duration</td>
+          <td>String (5)</td>
+          <td>Duration of accommodation (nights)</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.LodgingRefund</td>
+          <td>String (1) - Y = Yes / N = No</td>
+          <td>Indicates if hosting is refundable</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.ZipCode</td>
+          <td>String (10)</td>
+          <td>Hotel/Pousada Zip Code</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.Street</td>
+          <td>String (100)</td>
+          <td>Rua do Hotel/Pousada</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.Number</td>
+          <td>String (10)</td>
+          <td>Hotel/Inn Number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.Complement</td>
+          <td>String (100)</td>
+          <td>Hotel/Inn Complement</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.District</td>
+          <td>String (100)</td>
+          <td>Hotel/Inn Neighborhood</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.City</td>
+          <td>String (100)</td>
+          <td>Hotel/Pousada City</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.State</td>
+          <td>String (2)</td>
+          <td>Hotel/Inn Status</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Address.Country</td>
+          <td>String (100)</td>
+          <td>Country of Hotel/Inn</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Lodger.LodgerName</td>
+          <td>String (100)</td>
+          <td>Host Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Lodger.LodgerEmail</td>
+          <td>String (300)</td>
+          <td>Host Email</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Lodger.LodgerPhone</td>
+          <td>String (15)</td>
+          <td>Guest Phone</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Lodger.LodgerDocument.Type</td>
+          <td>String (14)</td>
+          <td>Type Doc Host</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.LodgingData.Lodger.LodgerDocument.Number</td>
+          <td>String (14)</td>
+          <td>In a Host Document</td>
+          <td>Yes</td>
+        </tr>
+
+        <!-- AirLineData -->
+        <tr>
+          <th colspan="4">AirLineData</th>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.LegNumber</td>
+          <td>Integer (2)</td>
+          <td>Sequential Leg Identification</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.Origin</td>
+          <td>String (3)</td>
+          <td>Airport Origin Flight Acronym</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.Destination</td>
+          <td>String (3)</td>
+          <td>Airport Flight Destination Acronym</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.FlightNumber</td>
+          <td>String (10)</td>
+          <td>Flight Number</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.DepartureTime</td>
+          <td>DateTime (yyyy-MM-dd HH:mm:ss)</td>
+          <td>Date and time of flight departure</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.IdClass</td>
+          <td>String (1) - F / J / Y / W</td>
+          <td>Trip Class Id</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.StopOverAllowed</td>
+          <td>String (1) - Y = Yes / N = No</td>
+          <td>Stop Over allowed?</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Legs.AirlineRefund</td>
+          <td>String (1) - Y = Yes / N = No</td>
+          <td>Indicates if ticket is refundable</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerName</td>
+          <td>String (100)</td>
+          <td>Passenger Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerEmail</td>
+          <td>String (300)</td>
+          <td>Passenger Email</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerPhone</td>
+          <td>String (15)</td>
+          <td>Passenger Phone</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerBirthDate</td>
+          <td>DateTime (10)</td>
+          <td>Passenger Birth Date</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerRating</td>
+          <td>String (10)</td>
+          <td>Passenger Classification</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerStatus</td>
+          <td>String (10)</td>
+          <td>Classification of the Airline Passenger</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerNationality</td>
+          <td>String(50)</td>
+          <td>Passenger Nationality</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerDocuments.Type</td>
+          <td>String (14)</td>
+          <td>Passenger Doc Type</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.AirlineData.Passengers.PassengerDocuments.Number</td>
+          <td>String(50)</td>
+          <td>In a Passenger Doc</td>
+          <td>Yes</td>
+        </tr>
+        <!-- DestinationServiceData -->
+        <tr>
+          <th colspan="4">DestinationServiceData</th>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSId</td>
+          <td>Integer (1)</td>
+          <td>Service ID (1- Transfer, 2- Insurance, 3- Circuit, 4- Tickets, 5- Tours, 6- Road Tickets, 7- Rail
+            Tickets)</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSType</td>
+          <td>String(50)</td>
+          <td>Type of Service</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSName</td>
+          <td>String (1200)</td>
+          <td>Service Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSDateStart</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>Start Date</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSDateEnd</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>End Date</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSDuration</td>
+          <td>Integer (5)</td>
+          <td>Duration of Service</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSOrigin</td>
+          <td>String(50)</td>
+          <td>Source of Service</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSDestination</td>
+          <td>String(50)</td>
+          <td>Service Destination</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSPenaltyDate</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>Penalty Date</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.DSDetails.DSQtPax</td>
+          <td>Integer (2)</td>
+          <td>Number of Passengers</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxName</td>
+          <td>String (100)</td>
+          <td>Passenger Name</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxBirthDate</td>
+          <td>Date (yyyy-MM-dd)</td>
+          <td>Date of Birth of the Passenger</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxEmail</td>
+          <td>String (300)</td>
+          <td>Passenger Email</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxPhone</td>
+          <td>String (15)</td>
+          <td>Passenger Phone</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxDocuments.Type</td>
+          <td>String (14)</td>
+          <td>Type of Passenger Document</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxDocuments.Number</td>
+          <td>String (15)</td>
+          <td>Guest Phone</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.ZipCode</td>
+          <td>String (10)</td>
+          <td>Passenger Zip Code</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.Country</td>
+          <td>String(50)</td>
+          <td>Country of Passenger</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.State</td>
+          <td>String (2)</td>
+          <td>Passenger Status</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.City</td>
+          <td>String(50)</td>
+          <td>City of the Passenger</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.District</td>
+          <td>String(50)</td>
+          <td>Passenger Quarter</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAdress.Street</td>
+          <td>String(50)</td>
+          <td>Passenger Street</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.Number</td>
+          <td>String (10)</td>
+          <td>Passenger Number</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>AdditionalData.DestinationServiceData.PaxDetails.PaxAddress.Complement</td>
+          <td>String (100)</td>
+          <td>Passenger Supplement</td>
+          <td>No</td>
+        </tr>
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .koin-tb {
+     display: block;
+     position: relative;
+ }
+ 
+
+ 
+ </style>
