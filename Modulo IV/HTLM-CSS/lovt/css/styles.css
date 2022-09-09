@@ -30,8 +30,16 @@ main{
 }
 
 .banner {
-  background: url("../imagens/Home_2.png");
+  background: url("../imagens/Rectangle1.svg");
   height: 350px;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+
 }
