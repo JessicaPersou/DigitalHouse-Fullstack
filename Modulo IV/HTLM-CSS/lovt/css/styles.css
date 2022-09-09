@@ -26,20 +26,38 @@ h1{
 .banner {
   display: flex;
   justify-content: center;
-  height: 320px;;
+  height: 350px;
   max-width: 100%;
   padding: 30px;
 }
 
 .anuncios {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 45px;
 }
 
 .card {
   display: flex;
   background-color: beige;
-
   flex-direction: column;
   width: 256px;
+}
+
+p {
+  font-size: small;
+  margin: 10px;
+  text-align: justify;
+}
+
+.text-anuncio strong{
+  font-size: 30px;
+  text-align: left;
+  background-color: green;
+}
+
+.text-anuncio span{
+  font-size: 30px;
+  text-align: right;
 }
