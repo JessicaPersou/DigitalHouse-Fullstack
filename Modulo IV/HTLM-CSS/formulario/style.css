@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: rgb(117, 184, 241);
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}
+
+.anuncio-pai{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.anuncio-filho{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 256px;
+}
+
+footer{
+    display: flex;
+    
+}
