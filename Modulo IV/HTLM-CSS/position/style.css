@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-pai{
+    display: flex;
+    background-color: rgb(219, 213, 216);
+}
+
+.filho-1{
+    background-color: rgb(170, 8, 89);
+    height: 200px;
+    width: 200px;
+}
+
+.filho-2{
+    background-color: #2e2525;
+    height: 200px;
+    width: 200px;
+}
+
+.filho-3{
+    background-color: #0e531f;
+    height: 200px;
+    width: 200px;
+}
