@@ -6,50 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>LOVT - FlexBox</title>
+    <title>FORMULÁRIO- FlexBox</title>
 </head>
 
 <body class="container-pai">
     <header class="header">
-        <div class="logo">
-            <h1>LOVT</h1>
-            <span>You Love, You Lovt!</span>
+        <div class="txt">
+            <h1>Formulário</h1>
         </div>
     </header>
-    <main class="main">
-        <section class="banner">
-            <img src="../lovt/imagens/Rectangle1.svg" alt="">
-        </section>
-        <section class="anuncio-pai">
-            <div class="anuncio-filho">
-                <img src="../lovt/imagens/Rectangle2.svg" alt="">
-                <div class="texto-anuncio">
-                    <strong>R$1200</strong>
-                    <span>NEW</span>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa fugiat veritatis ducimus sunt
-                    esse obcaecati!
-                    Molestiae sit sapiente eaque veniam at? Sint iste eos reiciendis laboriosam doloribus eveniet,
-                    est esse.
-                </p>
-            </div>
-            <div class="anuncio-filho">
-                <img src="../lovt/imagens/Rectangle3.svg" alt="">
-                <div class="texto-anuncio">
-                    <strong>R$2200</strong>
-                    <span>SALE</span>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa fugiat veritatis ducimus sunt
-                    esse obcaecati!
-                    Molestiae sit sapiente eaque veniam at? Sint iste eos reiciendis laboriosam doloribus eveniet,
-                    est esse.
-                </p>
-            </div>
-        </section>
-    </main>
+   
+    <form action="/registro" method="post">
+        <div class="dados-pessoais">
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="" id="telefone">
+            </p>
+            <p>
+                <label for="senha">Senha:</label required>
+                <input type="password" name="senha" id="senha">
+            </p>
+        </div>
+        <div class="questions">
+            <p>
+                <label>Você Já Trabalhou com Programação?</label>
+            </p>  
+            <p>
+                <input type="radio" id="sim" name="programacao" value="sim"><label for="sim">SIM</label>
+                <input type="radio" id="nao" name="programacao" value="nao"><label for="nao">NÃO</label>
+            </p> 
+            <p>
+                <label>Quais são seus conhecimentos?</label>
+            </p>
+            <p>
+                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">HTML</label>
+                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">CSS</label>
+                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">JAVASCRIPT</label>
+                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">NODE JS</label>
+                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">BANCO DE DADOS</label>
+            </p>
+            <p>
+                <label>Selecione o que mais te interessa: </label>
+            </p>
+            <p>
+                <select name="habilidade" id="habilidade">
+                    <option selected disabled>Selecione</option>
+                    <option value="front">Front-End</option>
+                    <option value="back">Back-End</option>
+                </select>
+            </p>
+        </div>
+        <div class="msg">
+            <p>
+                <label>Deixe uma Mensagem.</label>
+            </p>
+            <p>
+                <textarea name="msg" id="" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <button type="reset">Limpar Campos</button>
+            </p>
+            <p>
+                <button>Enviar</button>
+            </p> 
+        </div>
+    </form>
     <footer class="footer">
-        123
+        Direitos Reservados &copy; 2022.
     </footer>
 </body>
 
 </html>
+
+
+
