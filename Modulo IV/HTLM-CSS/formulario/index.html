@@ -16,48 +16,46 @@
         </div>
     </header>
    
-    <form action="/registro" method="post">
+    <form class="form" action="/registro" method="post">
         <div class="dados-pessoais">
             <p>
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome">
             </p>
 
             <p>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
             </p>
             <p>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="" id="telefone">
+                <input type="tel" name="" id="telefone" placeholder="Digite seu Telefone">
             </p>
             <p>
                 <label for="senha">Senha:</label required>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
             </p>
         </div>
         <div class="questions">
             <p>
                 <label>Você Já Trabalhou com Programação?</label>
-            </p>  
-            <p>
-                <input type="radio" id="sim" name="programacao" value="sim"><label for="sim">SIM</label>
-                <input type="radio" id="nao" name="programacao" value="nao"><label for="nao">NÃO</label>
-            </p> 
-            <p>
-                <label>Quais são seus conhecimentos?</label>
+                <ul>
+                    <li><input type="radio" id="sim" name="programacao" value="sim"><label for="sim">SIM</label></li>
+                    <li><input type="radio" id="nao" name="programacao" value="nao"><label for="nao">NÃO</label></li>
+                </ul>
             </p>
             <p>
-                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">HTML</label>
-                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">CSS</label>
-                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">JAVASCRIPT</label>
-                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">NODE JS</label>
-                <input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">BANCO DE DADOS</label>
+                <label>Quais são seus conhecimentos?</label>
+                <ul>
+                    <li><input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">HTML</label></li>
+                    <li><input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">CSS</label></li>
+                    <li><input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">JAVASCRIPT</label></li>
+                    <li><input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">NODE JS</label></li>
+                    <li><input type="checkbox" name="conhecimento" value="html"><label for="conhecimento">BANCO DE DADOS</label></li>
+                </ul>
             </p>
             <p>
                 <label>Selecione o que mais te interessa: </label>
-            </p>
-            <p>
                 <select name="habilidade" id="habilidade">
                     <option selected disabled>Selecione</option>
                     <option value="front">Front-End</option>
@@ -67,17 +65,15 @@
         </div>
         <div class="msg">
             <p>
-                <label>Deixe uma Mensagem.</label>
+                <label>Deixe uma Mensagem:</label>
             </p>
             <p>
-                <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                <textarea name="msg" id="" cols="50" rows="20"></textarea>
             </p>
-            <p>
+            <div class="button">
                 <button type="reset">Limpar Campos</button>
-            </p>
-            <p>
                 <button>Enviar</button>
-            </p> 
+            </div> 
         </div>
     </form>
     <footer class="footer">

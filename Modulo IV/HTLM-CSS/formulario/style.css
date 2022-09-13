@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
 }
 
 :root{
@@ -20,5 +20,43 @@
     flex-direction: row;
     background-color: var(--background-1);
     box-shadow: 0px 0px 6px 0px #000;
+    padding: 15px;
 }
 
+.form{
+    height: 80vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.dados-pessoais{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button{
+    padding: 10px;
+}
+
+.footer{
+    background-color: var(--background-1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
