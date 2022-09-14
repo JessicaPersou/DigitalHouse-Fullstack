@@ -134,6 +134,13 @@ header {
   gap: 20px;
 }
 
+.img-fixed{
+  width: 80px;
+  position:fixed;
+  bottom: 0;
+
+}
+
 .footer-container{
   background-color: var(--background-color);
   color: aliceblue;
